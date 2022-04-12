@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE foodlist SYSTEM "food.dtd">
+<?xml-stylesheet type="text/xsl" href="food.xsl"?>
+<foodlist>
+    <fooditem type="Italian">
+        <name>Pizza</name>
+        <cost>$10</cost>
+    </fooditem>
+    <fooditem type="Italian">
+        <name> Pasta</name>
+        <cost>$5</cost>
+    </fooditem>
+    <fooditem type="American">
+        <name>Burger</name>
+        <cost>$8</cost>
+    </fooditem>
+    <fooditem type="Russian">
+        <name>Noodles</name>
+        <cost>$9</cost>
+    </fooditem>
+    <fooditem  type="Russian">
+        <name>Noodles</name>
+        <cost>$9</cost>
+    </fooditem>
+</foodlist>

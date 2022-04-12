@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT foodlist (fooditem+)>
+<!ELEMENT fooditem (name,cost)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT cost (#PCDATA)>
+<!ATTLIST fooditem type (Italian|American|Russian) "American">
