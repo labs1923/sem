@@ -1,0 +1,69 @@
+
+body{
+background-color: rgb(53, 43, 190);
+display: flex;
+align-items: center;
+justify-content: center;
+height: 590px;
+}
+.register{
+display:grid;
+width: 500px;
+background-color: rgb(28, 185, 224);
+}
+.register > label{
+padding: 2px;
+font-family: Georgia, 'Calibri', Times, serif;
+margin-left:30px;
+margin-right: 20px;
+font-size: 19px;
+}
+.register > input {
+border: none;
+height: 30px;
+margin-left:30px;
+margin-right: 20px;
+outline: none;
+}
+.register > textarea{
+border-radius: 10px;
+border: none;
+height: 30px;
+margin-left:30px;
+margin-right: 20px;
+outline: none;
+resize: none;
+}
+.register > select{
+border: none;
+height: 30px;
+margin-left:30px;
+margin-right: 20px;
+}
+.register > button{
+margin-top: 10px;
+height: 30px;
+width: 30%;
+margin-left: 140px;
+border: none;
+background-color: rgba(15, 216, 189, 0.973);
+font-size: 20px;
+color: aliceblue;
+margin-bottom: 10px;
+cursor: pointer;
+}
+.register > p{
+font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+font-size: 18px;
+margin-left: 30px;
+margin-top: 0px;
+}
+.register > p > a{
+text-decoration: none;
+margin-left: 10px;
+}
+
+.contact > p{
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+font-size: 40px;
+}

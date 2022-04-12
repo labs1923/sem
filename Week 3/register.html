@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="Style.css">
+	
+</head>
+<body>
+	<form onsubmit=validate()>
+		<div class="register">
+			<label >Name</label>
+			<input id="name" type="text" placeholder="Enter Name" />
+			<span id="username" class="text-danger font-weight"></span>
+			<label>Password</label>
+			<input id="password" type="password" placeholder="Enter Password" />
+			<span id="passwords" class="text-danger font-weight"></span>
+			<label>Confirm Password</label>
+			<input id="confirm_password" type="password" placeholder="Enter Password Again" />
+			<span id="passcheck" class="text-danger font-weight"></span>
+			<label>Email</label>
+			<input id="email" type="email" placeholder="Enter email"/>
+			<label>Mobile Number</label>
+			<input id="mobile" type="tel" placeholder="Enter mobile number" pattern="[6-9]{1}[0-9]{9}"/>
+			<label>DOB</label>
+			<input id="dob" type="date" placeholder="Enter Date of Birth"/>
+			<label>Address</label>
+			<textarea id="address" placeholder="Enter Address"></textarea>
+			<label>Gender</label>
+			<select id="gender">
+				<option>Male</option>
+				<option>Female</option>
+				<option>Others</option>
+			</select>
+			<button>Submit </button>
+			<p>Already have an account?<a href="login.html">Log in</a> </p>
+		</div>
+	</form>
+	
+	<script>
+		function validate(){
+			var user=document.getElementById('name').value;
+			var pass = document.getElementById('password').value;
+			var cpass = document.getElementById('confirm_password').value;
+			if(user.length<=6){
+                alert("Username must be greater than 6");
+				return false;
+            }
+            if(pass.length<8){
+                alert("Password must be atleast 8 characters")
+				return false;
+            }
+            if(pass!=cpass){
+                alert("Password and Confirm password are not same.")
+				return false;
+            }
+			if(emails==""){
+                document.getElementById('emailids').innerHTML="please fill the email id field";
+                return false;
+            }
+		}
+	</script>
+</body>
+</html>
