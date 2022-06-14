@@ -1,62 +1,122 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link rel="stylesheet" href="Style.css">
-	
+	<link rel="stylesheet" href="styles.css">
 </head>
-<body>
-	<form onsubmit=validate()>
-		<div class="register">
-			<label >Name</label>
-			<input id="name" type="text" placeholder="Enter Name" />
-			<span id="username" class="text-danger font-weight"></span>
-			<label>Password</label>
-			<input id="password" type="password" placeholder="Enter Password" />
-			<span id="passwords" class="text-danger font-weight"></span>
-			<label>Confirm Password</label>
-			<input id="confirm_password" type="password" placeholder="Enter Password Again" />
-			<span id="passcheck" class="text-danger font-weight"></span>
-			<label>Email</label>
-			<input id="email" type="email" placeholder="Enter email"/>
-			<label>Mobile Number</label>
-			<input id="mobile" type="tel" placeholder="Enter mobile number" pattern="[6-9]{1}[0-9]{9}"/>
-			<label>DOB</label>
-			<input id="dob" type="date" placeholder="Enter Date of Birth"/>
-			<label>Address</label>
-			<textarea id="address" placeholder="Enter Address"></textarea>
-			<label>Gender</label>
-			<select id="gender">
-				<option>Male</option>
-				<option>Female</option>
-				<option>Others</option>
-			</select>
-			<button>Submit </button>
-			<p>Already have an account?<a href="login.html">Log in</a> </p>
-		</div>
-	</form>
-	
-	<script>
-		function validate(){
-			var user=document.getElementById('name').value;
-			var pass = document.getElementById('password').value;
-			var cpass = document.getElementById('confirm_password').value;
-			if(user.length<=6){
-                alert("Username must be greater than 6");
-				return false;
-            }
-            if(pass.length<8){
-                alert("Password must be atleast 8 characters")
-				return false;
-            }
-            if(pass!=cpass){
-                alert("Password and Confirm password are not same.")
-				return false;
-            }
-			if(emails==""){
-                document.getElementById('emailids').innerHTML="please fill the email id field";
-                return false;
-            }
+	<div style="margin-left:500px">
+	<label>Name</label>
+		<br>
+	<input placeholder="Enter Name" type="text" id="Name"/>
+	<br>
+	<label>password</label>
+		<br>
+	<input placeholder="Enter password" type="password" id="pass"/>
+	<br>
+	<label>confirm password</label>
+		<br>
+	<input placeholder="confirm password" type="password" id="passagain"/>
+	<br>
+	<label>Email</label>
+	<br>
+	<input placeholder="Enter email" type="text" id="email" id="email" />
+	<br>
+	<label>Mobile Number</label>
+	<br>
+	<input placeholder="Enter mobile number" type="number" id="number" />
+	<br>
+	<label>DOB</label>
+	<br>
+	<input placeholder="Enter Date of Birth" type="date" />
+	<br>
+	<label>Address</label>
+	<br>
+	<textarea placeholder="Enter Address" type="text"></textarea>
+	<br>
+	<label>Gender</label>
+	<br>
+	<select>
+	<option>Male</option>
+	<option>Female</option>
+	<option>Others</option>
+	</select>
+	<br>
+	<div   style="margin: 15px 50px;">
+		<button class="myButton" onclick="validate()" > Submit </button>
+	</div>
+	<br>
+	<p>Don't have an account?
+		
+			<button class="myButton" style="height: 25px; padding: 3px;">
+				<a href="login.html" style="font-size: small;">Login in</a> 
+			</button>
+		
+		</p>
+</div>
+<script>
+	function validate(){
+		let name = document.getElementById('Name').value
+		let pass = document.getElementById('pass').value
+		let passagain = document.getElementById('passagain').value
+		let email = document.getElementById('email').value
+		let phno = document.getElementById('number').value
+		
+		if(name.length<5){
+			alert("username length is less");
+			location.reload();
 		}
-	</script>
-</body>
+		if(pass.length<8){
+			alert("password length not sufficent")
+			location.reload();
+		}
+		else{
+			let capflag = 0,smallflag=0,specialflag=0,numberflag=0;
+			for(let i=0;i<pass.length;i++){
+				if(pass.charCodeAt(i)>=65 && pass.charCodeAt(i)<=91)
+				{
+					capflag=1;
+				}
+				else if(pass.charCodeAt(i)>= 97&& pass.charCodeAt(i)<=121)
+				{
+					smallflag=1;
+				}
+				else if(pass.charCodeAt(i)>=48 && pass.charCodeAt(i)<=57){
+					numberflag = 1;
+				}
+				else{
+					specialflag = 1;
+				}
+				
+			}
+			if(capflag==0 || smallflag==0 || specialflag==0 || numberflag==0){
+				alert("password constraint doesnot matched");
+				location.reload();
+			}
+
+		}
+		if(passagain!=pass){
+			alert("passwords doesnt match");
+			location.reload();
+		}
+		if(phno.charCodeAt(0)>=54 && phno.charCodeAt(0)<=57 && phno.length!=10){
+			alert("phone number invalid");
+			location.reload();
+		}
+		let attherate=0,dot=0
+		for(let i=0;i<email.length;i++){
+			if(email[i]=='@'){
+					attherate = 1;
+				}
+			if(email[i]=='.'){
+					dot = 1;
+				}
+		}
+
+		if(attherate==0 || dot==0){
+			alert("Invalid email");
+			location.reload();
+		}
+		
+
+	}
+</script>
 </html>
