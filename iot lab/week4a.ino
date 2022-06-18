@@ -11,6 +11,6 @@ void loop() {
   mystepper.step(STEPS_PER_REV);
   delay(500);
   Serial.println("Counter Clockwise");
-  mystepper.step(STEPS_PER_REV);
+  mystepper.step(-STEPS_PER_REV);
   delay(500);
 }
