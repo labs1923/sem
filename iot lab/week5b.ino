@@ -4,7 +4,6 @@ float h,t;
 void setup() {
   Serial.begin(9600);
   dht.begin(9600);
-  dht.begin();
   Serial.println("Connect DHT to GV89");
   Serial.println("Starting DHT test");
   delay(2000);
