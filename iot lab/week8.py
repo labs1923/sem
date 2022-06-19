@@ -59,7 +59,6 @@ g.setup(trigpin,g.OUT)
 g.setup(echopin,g.IN)
 while True:
     dist=distance(trigpin,echopin)
-    print("Measured distance in cm is".format(dist))
-    print(dist)
+    print("Measured distance in cm is {}".format(dist))
     time.sleep(0.25)
     
