@@ -1,5 +1,5 @@
 
-int RED = 9,BLUE = 10,GREEN = 11;
+int RED = 9,BLUE = 11,GREEN = 10;
 void setup()
 {
   pinMode(RED, OUTPUT);
