@@ -21,7 +21,6 @@ if __name__=="__main__":
 
 int vrx =  A0;
 int vry = A1;
-int sw  = 2;
 int xposition = 0;
 int yposition = 0;
 int mapx = 0 , mapy = 0;
