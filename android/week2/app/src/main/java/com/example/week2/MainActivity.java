@@ -31,28 +31,15 @@ public class MainActivity extends AppCompatActivity
             @Override
             public void onClick(View v) {
                 switch (ch) {
-                    case 1:
-                        t.setTextColor(Color.RED);
-                        break;
-                    case 2:
-                        t.setTextColor(Color.GREEN);
-                        break;
-                    case 3:
-                        t.setTextColor(Color.BLUE);
-                        break;
-                    case 4:
-                        t.setTextColor(Color.CYAN);
-                        break;
-                    case 5:
-                        t.setTextColor(Color.YELLOW);
-                        break;
-                    case 6:
-                        t.setTextColor(Color.MAGENTA);
-                        break;
+                    case 1:t.setTextColor(Color.RED);break;
+                    case 2:t.setTextColor(Color.GREEN);break;
+                    case 3:t.setTextColor(Color.BLUE);break;
+                    case 4:t.setTextColor(Color.CYAN);break;
+                    case 5:t.setTextColor(Color.YELLOW);break;
+                    case 6:t.setTextColor(Color.MAGENTA);break;
+                    default: ch = 1;break;
                 }
                 ch++;
-                if (ch == 7)
-                    ch = 1;
             }
         });
     }
