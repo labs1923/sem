@@ -1,8 +1,5 @@
 '''import RPi.GPIO as GPIO
 import time
-
-
-
 def distance(trigpin,echopin):
     GPIO.output(trigpin,True)
     time.sleep(0.00001)
