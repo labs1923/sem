@@ -1,0 +1,13 @@
+# R program to create an array of two 3x3 matrices each with 3 rows and 3 columns from two given two vectors. Print the second row of the second matrix of the array and the element in the 3rd row and 3rd column of the 1st matrix.
+a = c(1,2,3,4,5)
+b = c(-10,-20,-30,-40,-50,-60)
+print("Initial Vectors : ")
+print(a)
+print(b)
+c = array(c(a,b),dim=c(3,3,2))
+print("Combined Array : ")
+print(c)
+print("The second row of the second matrix of the array is : ")
+print(c[2,,2])
+print("The element in the 3rd row and 3rd column of the 1st matrix : ")
+print(c[3,3,1])
