@@ -10,8 +10,6 @@
             Class.forName("com.mysql.cj.jdbc.Driver");
             Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/javalab","root","yourpassword");
             Statement stmt = con.createStatement();
-            String query = "create table mytable (name varchar(20),password varchar(20),secret varchar(200))";
-            stmt.execute(query);
             String q = "insert into mytable values('"+name+"','"+password+"','"+secret+"')";
             int rs = stmt.executeUpdate(q);
             if(rs==1){
