@@ -11,5 +11,5 @@ print(emp)
 emp1 = subset(data, dept == "IT")
 print(emp1)
 # employee working in IT dept and having sal > 600 
-emp2 = subset(data, sal>600 & dept=="IT")
+emp2 = subset(data,  dept=="IT" & salary>600 )
 print(emp2)
