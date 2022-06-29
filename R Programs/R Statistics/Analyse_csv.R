@@ -1,5 +1,5 @@
 # Write an R program to read a csv file and analyse the data in the file in R.
-data = read.csv(input)
+data = read.csv("input.csv")
 print(data)
 # max salary in data
 sal = max(data$salary)
